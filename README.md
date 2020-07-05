@@ -20,3 +20,12 @@ Install pytest:
 
 Create a requirements.txt.
 1. pip3 freeze > requirements.txt
+
+
+# Important notes (Learning)
+1. Always re-read the problem. Things are almost always easier than they seem. 
+Even if you think you understand the problem, reread it, and write down what 
+you have to do to solve the problem.
+2. Examples. Create your own, try and think of possible scenarios to test, 
+and do that. Always use examples and edge cases to construct your solutions. 
+Don't fixate on edge cases, but use them!!. 

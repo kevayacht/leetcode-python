@@ -11,21 +11,32 @@
 # question: is the supplied list/array already sorted?
 
 
+# so initially I completely misunderstood this problem... I should be using
+# TWO numbers to find the solution, that makes it a hell of a lot easier!!!
 def two_sum(supply, target):
-    supply_list = []    # add tuples in here of (index, value)
-    count_sum = 0
+    index_list = []    # add tuples in here of (index, value)
+    value_list = []
 
     for index, value in enumerate(supply):
-        # add
-        # if
 
-        if count_sum == target:
+        if sum(value_list) < target:
+            # print(f"SUM: {sum(value_list)}")
+            index_list.append(index)
+            value_list.append(value)
+        elif sum(value_list) > target:
+            # print(f"SUM: {sum(value_list)}")
+            difference = sum(value_list) - target
+            # print(f"Difference: {difference}")
+
+            if difference in value_list:
+                removed_index = value_list.index(difference)
+                # print(f"removed_index: {removed_index}")
+                value_list.remove(difference)
+                index_list.remove(removed_index)
+        else:
             break
 
-    return supply_list
+    # this particular problem will persist till infinity, maybe look at a
+    # while loop, or recursion
 
-
-if __name__ == "__main__":
-    two_sum()
-
-
+    return index_list

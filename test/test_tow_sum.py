@@ -11,10 +11,15 @@ from problems.two_sum import two_sum
                     9,
                     [0, 1],
             ),
-            (  # test case 2
-                    [2, 7, 11, 15],
+            (  # test case 2, more to the edge case.
+                    [2, 3, 7, 11, 15],
                     9,
-                    [0, 1],
+                    [0, 2],
+            ),
+            (  # test case 3, more to the edge case.
+                    [2, 3, 5, 7, 11, 15],
+                    9,
+                    [0, 2],
             ),
     )
 )
