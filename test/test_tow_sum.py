@@ -19,9 +19,19 @@ from problems.two_sum import two_sum
             (  # test case 3, more to the edge case.
                     [2, 3, 5, 7, 11, 15],
                     9,
-                    [0, 2],
+                    [0, 3],
             ),
-    )
+            (  # test case 3, more to the edge case.
+                    [2, 3, 4, 5, 7, 11, 15],
+                    12,
+                    [3, 4],
+            ),
+            (  # test case 3, more to the edge case.
+                    [3, 2, 4],
+                    6,
+                    [1, 2],
+            ),
+    )  #
 )
 def test_two_sum(set_input_1, set_input_2, set_output):
     result = two_sum(set_input_1, set_input_2)
